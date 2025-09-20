@@ -1,8 +1,4 @@
-<div style="text-align:center; font-size:32px;">
-
-# SQLをオブシコで。
-
-</div>
+<div style="text-align:center; font-size:60px;"><b>SQLをオブシコで。</b></div>
 
 ## 目的
 
