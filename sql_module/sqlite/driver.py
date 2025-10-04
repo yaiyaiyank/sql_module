@@ -76,7 +76,7 @@ class Driver:
     def begin(self):
         self.conn.execute("BEGIN")
 
-    def execute_cursor(self, query: str, parameters: dict[str] = None, time_log: bool = False) -> Self:
+    def execute_cursor(self, query: str, parameters: dict[str] = None, time_log: bool = False):
         self.open_full()
         time_start = time.time()
         if not parameters:
@@ -87,7 +87,6 @@ class Driver:
         time_end = time.time()
         if time_log:
             print(f"実行時間: {time_end - time_start:10f}s")
-        return self
 
     def rollback(self):
         self.conn.rollback()
