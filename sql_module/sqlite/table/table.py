@@ -2,7 +2,8 @@ from yai.entry import Log, dataclass, field, Path, datetime, Literal, base_utils
 from ..driver import Driver
 from .name import TableName
 from .column.name import ColumnName
-from .column.column import Column, ColumnConstraint
+from yai.entry.sql_module.sqlite import Column
+from .column.column import ColumnConstraint
 
 # create系
 from yai.entry.sql_module.sqlite.constraint import CompositeConstraint

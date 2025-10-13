@@ -43,6 +43,11 @@ create.execute()
 ```python
 uni = sqlite.constraint.UniqueCompositeConstraint([column1, column2])
 create = table.create([column1, column2], [uni])
+
+# 複合主キーは変更に弱いので非推奨です。これは多くのORMが複合主キーに対応せずサロゲートキーのみに対応している事実からもわかります。
+# もし、今複合主キーを含むデータベースがあるならその複合主キーを複合ユニークとし、それをサロゲートキーに対応させましょう。
+# pri = sqlite.constraint.PrimaryCompositeConstraint([column1, column2])
+# create = table.create([column1, column2], [pri])
 ```
 
 
