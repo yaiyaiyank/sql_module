@@ -48,8 +48,12 @@ class AtDateIDTableDefinition(TableDefinition):
     def __post_init__(self):
         self.id_column = self.table.get_column("id", type=int, primary=True)
         self.set_colmun_difinition()
-        self.created_at_column = self.table.get_column("created_at", type=datetime.datetime)
-        self.updated_at_column = self.table.get_column("updated_at", type=datetime.datetime)
+        self.created_at_column = self.table.get_column(
+            "created_at", type=datetime.datetime, default_value="CURRENT_TIMESTAMP"
+        )
+        self.updated_at_column = self.table.get_column(
+            "updated_at", type=datetime.datetime, default_value="CURRENT_TIMESTAMP"
+        )
 
     @abstractmethod
     def set_colmun_difinition(self):
