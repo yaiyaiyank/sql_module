@@ -132,3 +132,9 @@ class Table:
         on_conflict_query = query_builder.get_on_conflict_query(record)
 
         query = f"{head_query} {self.name.now} {value_query} {on_conflict_query}"
+        insert = Insert(driver=self.driver, query=query)
+
+        if is_execute:
+            insert.execute()
+
+        return insert
