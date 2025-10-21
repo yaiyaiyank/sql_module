@@ -6,7 +6,7 @@ class PlaceHolderable:
     placeholder_dict: dict = field(default_factory=dict)
     log: Log = field(default_factory=Log)
 
-    def add_placeholder(self, sql_value: list) -> str:
+    def _add_placeholder(self, sql_value: list) -> str:
         """
         例
         self.valiavle_dict: {p0: 5}
