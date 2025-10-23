@@ -9,7 +9,7 @@ class PlaceHolderable:
     def _add_placeholder(self, sql_value: list) -> str:
         """
         例
-        self.valiavle_dict: {p0: 5}
+        self.valiavle_dict: {'p0': 5}
         sql_value: 'うおｗ'
         ->
         self.valiavle_dictを{'p0': 5, 'p1': 'うおｗ'}にして
