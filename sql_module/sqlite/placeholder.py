@@ -9,10 +9,10 @@ class PlaceHolderable:
     def _add_placeholder(self, sql_value: list) -> str:
         """
         例
-        self.valiavle_dict: {'p0': 5}
+        self.placeholder_dict: {'p0': 5}
         sql_value: 'うおｗ'
         ->
-        self.valiavle_dictを{'p0': 5, 'p1': 'うおｗ'}にして
+        self.placeholder_dictを{'p0': 5, 'p1': 'うおｗ'}にして
         ':p1' を返す
 
         変数名がpというふうに可読性が終わっているのはクエリの文字数の上限により到達しにくくするためである
